@@ -1,15 +1,15 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>{{config('app.name','1SAPP')}}</title>
-
+@extends('layouts.app')
+@section('content')
+<h1>{{$title}}</h1>
+@if(count($services)>0)
+<ul>
+    @foreach ($services as $service)
+<li>{{$service}}</li>
         
-    </head>
-    <body>
-       <h1>Services</h1>
-    </body>
-</html>
+    @endforeach
+</ul>
+@endif
+@endsection
+       
+       
